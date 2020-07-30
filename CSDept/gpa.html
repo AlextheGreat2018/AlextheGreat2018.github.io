@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Calculate GPA</title>
+  <link rel="stylesheet" href="Styles/calc.css">
+  <script src="Scripts/grades.js"></script>
+</head>
+    
+<body>
+  <div class="box">
+    <header>
+      <a href="index.html"><img id="computer" src="Pictures/outerLogo.ico" alt="logo"></a>
+      <h1>AUM Computer Science</h1>
+    </header>
+    
+    <section>
+      <nav id="nav_menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Our Program</a></li>
+          <li><a href="apply.html">Apply to Assist</a></li>
+          <li><a class="current" href="gpa.html">Calculate GPA</a></li>
+        </ul>
+      </nav>
+    </section>
+    
+    <main>
+      <div class="display">
+        <h1 id="displayhead">Calculate Your GPA</h1>
+          
+        <label for="hours">Credit Hours:</label>
+        <input type="text" id="hours" onfocus="if($('hours').value != ''){$('hours').value='';}"><br>
+        
+        <label for="grade">Letter Grade:</label>
+        <input type="text" id="grade" pattern="[A-F]{1}" onfocus="if($('grade').value != ''){$('grade').value='';}"><br>
+          
+        <label for="gpa">GPA:</label>
+        <input type="text" id="gpa" ondblclick="clearGrades()">
+          
+        <label>&nbsp;</label>
+	    <input type="button" id="add" value="Add Score" onclick="addGrade();processGrades()">
+        <input type="button" id="display_grades" value="Display Info" ><br>
+	
+        <textarea id="grades_display"></textarea>
+      </div>
+    </main>
+    
+    <footer>
+      <p class="contact">Alex Maynard</p>
+      <p class="contact">Email: amaynard @aum.edu</p>
+      <p class="contact">Phone: (334)425-0279</p>
+      <p class="contact">&copy;Copyright 2020.</p>
+    </footer>
+  </div>
+</body>
+</html>

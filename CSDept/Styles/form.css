@@ -1,0 +1,133 @@
+header {
+    padding: 0.5em 0em;
+    border-bottom: 2px solid black;
+    background-image: linear-gradient(180deg, darkorange 0%, orange 25%, white 100%);
+}
+
+footer {
+    border-top: 2px solid black;
+    background-image: linear-gradient(180deg, white 0%, orange 75%, darkorange 100%);
+    clear: both;
+}
+
+body {
+    font-family: sans-serif;
+    background-image: url("../Pictures/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.form {
+    width: 450px;
+    border: 3px solid black;
+    margin: 3.5em auto;
+    padding: 10px 20px;
+}
+
+.box {   
+    width: 960px;
+    border: 2px solid black;
+    margin-top: 10px;
+    margin-left: 200px;
+    background-color: white;
+}
+
+.contact {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+h1 {
+    font-size: 240%;
+    color: black;
+    text-shadow: 2px 0 orange, 3px 0 orange;
+    padding-left: 3.5em;
+}
+
+#formhead {
+    font-size: 150%;
+    padding: 0;
+    text-align: center;
+}
+
+label {
+  float: left;
+  width: 8em;
+  font-weight: bold;
+  text-align: left;
+}
+
+input {
+  width: 15em;
+  margin: 0 0 .5em 1em;
+  border: 1px solid gray;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+input:invalid, input:required{
+  box-shadow: none;
+}
+
+input:focus{
+  border-color: darkorange;
+}
+
+textarea {
+  width: 20em;
+  height: 8em;
+  font-size: 120%;
+}
+
+#button, #reset {
+  width: 7em;
+  background-color: silver;
+  box-shadow: 2px 2px 0 black; 
+}
+
+#button {
+  margin-left: 9em;
+}
+
+#computer {
+    width: 100px;
+    float: left;
+    position: relative;
+    margin-left: 10px;
+    top: 0;
+    left: 0;
+}
+
+#nav_menu ul li a:hover {
+    background-color: gray;
+}
+
+#nav_menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#nav_menu ul li {
+    width: 240px;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+#nav_menu ul li a {
+    text-align: center;
+    display: block;
+    padding: 1em 1em;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-size: 90%;
+}
+
+#nav_menu a.current {
+    color: orange;
+}

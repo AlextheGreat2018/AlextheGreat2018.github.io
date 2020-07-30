@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Assistant Application</title>
+  <link rel="stylesheet" href="Styles/form.css">
+</head>
+    
+<body>
+  <div class="box">
+    <header>
+      <a href="index.html"><img id="computer" src="Pictures/outerLogo.ico" alt="logo"></a>
+      <h1>AUM Computer Science</h1>
+    </header>
+    
+    <section>
+      <nav id="nav_menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Our Program</a></li>
+          <li><a class="current" href="apply.html">Apply to Assist</a></li>
+          <li><a href="gpa.html">Calculate GPA</a></li>
+        </ul>
+      </nav>
+    </section>
+    
+    <main>
+      <div class="form">
+        <h1 id="formhead">Teaching Assistant Application</h1>
+        <form name="myform" action="app_data.html" method="get">
+	
+          <label for="name">Full name:</label>
+          <input type="text" name="Name" id="name" autofocus required><br>
+          <label for="stuid">ID:</label>
+          <input type="text" name="Student ID" id="stuid" pattern = "[S]+([0-9]{8})" placeholder="S Number" required><br>
+          <label for="gender">Gender:</label>
+          <input type="text" name="Gender" id="gender" required><br>
+          <label for="gpa">GPA:</label>
+          <input type="text" name="GPA" id="gpa" 
+           pattern="[0-4]\.\d{2}" placeholder="Two decimal places" required><br>
+          <label for="date">Submission Date:</label>
+          <input type="text" name="Date" id="date"
+           pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="MM/DD/YYYY" required><br><br>
+          <label for="comments">Comments:</label>
+          <textarea name="Comments" id="comments"></textarea>
+    
+          <input type="submit" name="button" id="button" value="Submit">
+          <input type="reset" name="reset" id="reset"> 
+        </form>
+      </div>
+    </main>
+    
+    <footer>
+        <p class="contact">Alex Maynard</p>
+        <p class="contact">Email: amaynard @aum.edu</p>
+        <p class="contact">Phone: (334)425-0279</p>
+        <p class="contact">&copy;Copyright 2020.</p>
+    </footer>
+  </div>
+</body>
+</html>

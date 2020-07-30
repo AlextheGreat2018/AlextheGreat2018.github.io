@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Application Data</title>
+<style>
+    .display {
+    	width: 500px;
+    	margin: 3.5em auto;
+    	padding: 0 30px;
+    	border: 2px solid black;
+    }
+    dt {
+        font-weight: bold;
+    }
+</style>
+<link rel="stylesheet" href="Styles/form.css">
+<script type="text/javascript">
+//<![CDATA[
+var decode = function ( text ) {
+    text = text.replace(/\+/g, " ");
+    text = text.replace(/%[a-fA-F0-9]{2}/g, 
+        function ( text ) {
+            return String.fromCharCode( "0x" + text.substr(1,2));
+        }
+    );
+    return text;
+}
+    
+var display_data = function () {
+    var query = location.search.replace("?", "");
+    if ( query == "" ) return;
+    
+    var fields = query.split("&");
+    
+    if ( fields.length == 0 ) {
+        document.write("<p>No data was submitted.</p>");
+    } else {
+        document.write("<dl>");
+        var field_parts;
+        for ( var i in fields ) {
+            field_parts = fields[i].split("=");
+            field_parts[0] = decode( field_parts[0] );
+            field_parts[1] = decode( field_parts[1] );
+            document.write("<dt>" + field_parts[0] + "</dt>");
+            document.write("<dd>" + field_parts[1] + "</dd>");
+        }
+        document.write("</dl>");
+    }
+}
+//]]>
+</script>
+</head>
+
+<body>
+  <div class="box">
+    <header>
+      <a href="index.html"><img id="computer" src="Pictures/outerLogo.ico" alt="logo"></a>
+      <h1>AUM Computer Science</h1>
+    </header>
+    
+    <section>
+      <nav id="nav_menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Our Program</a></li>
+          <li><a href="apply.html">Apply to Assist</a></li>
+          <li><a href="gpa.html">Calculate GPA</a></li>
+        </ul>
+      </nav>
+    </section>
+    
+    <main>
+      <div class="display">
+        <h1>Application Data</h1>
+        <script>display_data();</script>
+      </div>
+    </main>
+    <footer>
+      <p class="contact">Alex Maynard</p>
+      <p class="contact">Email: amaynard @aum.edu</p>
+      <p class="contact">Phone: (334)425-0279</p>
+      <p class="contact">&copy;Copyright 2020.</p>
+    </footer>
+  </div>
+</body>
+</html>
