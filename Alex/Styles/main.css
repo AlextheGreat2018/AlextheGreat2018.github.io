@@ -1,0 +1,65 @@
+header {
+    padding: 2em 0em;
+    border-bottom: 2px solid black;
+    background-color: lightblue;
+}
+body {
+    font-family: sans-serif;
+    background-image: url("../Images/puzzle.ico");
+}
+h1 {
+    padding-left: 10px;
+}
+p {
+    padding-left: 10px;
+}
+.box {
+    width: 840px;
+    border: 2px solid black;
+    margin-left: 250px;
+    margin-top: 15px;
+    background-color: white;
+}
+#heading {
+    float: left;
+    font-size: 180%;
+    margin: 10px;
+}
+#alex {
+    width: 200px;
+    float: left;
+    margin: 15px 15px;
+}
+#nav_menu ul {
+    list-style-type: none;
+}
+#nav_menu ul li {
+    float: right;
+    width: 120px;
+    padding-right: 1em;
+}
+#nav_menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+#nav_menu a:hover {
+    color: gray;
+}
+footer {
+    padding: 2em 0;
+    border-top: 2px solid black;
+    background-color: lightblue;
+    clear: both;
+}
+.contact {
+    font-size: 90%;
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+#copyright {
+    font-size: 90%;
+    float: right;
+    margin: 0;
+    padding: 0;
+}
